@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
+ <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="صفحه رسمی farhadpubgor - گیم‌پلی، ویدیوهای جذاب و محتوای ویژه در شبکه‌های اجتماعی">
     <meta name="keywords" content="farhadpubgor, گیم‌پلی, یوتیوب, آپارات, اینستاگرام, تلگرام">
@@ -25,8 +22,9 @@
 <meta name="twitter:title" content="فرهاد پابجی">
 <meta name="twitter:description" content="صفحه رسمی فرهاد پابجی و FarhadPubg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>farhadpubgor | شبکه‌های رسمی من</title>
+    <title>farhadpubgor</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💥</text></svg>">
+
     <style>
         * {
             margin: 0;
@@ -452,6 +450,8 @@
             opacity: 0.8;
         }
 
+
+
         /* Loading Screen */
         .loader {
             position: fixed;
@@ -653,9 +653,189 @@
                 padding: 20px;
             }
         }
+
+.support-section {
+            margin-top: 40px;
+            text-align: center;
+            animation: fadeInUp 0.8s ease-out both;
+            animation-delay: 1.2s;
+        }
+        
+        .support-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #0088cc, #34b7f1);
+            color: white;
+            text-decoration: none;
+            padding: 16px 35px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            box-shadow: 0 5px 20px rgba(0, 136, 204, 0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        .support-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+        
+        .support-btn:hover::before {
+            left: 100%;
+        }
+        
+        .support-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 136, 204, 0.6),
+                        0 0 20px rgba(0, 136, 204, 0.4);
+        }
+        
+        .support-btn:active {
+            transform: translateY(-2px) scale(1.02);
+        }
+        
+        .support-icon {
+            font-size: 1.3em;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-5px);
+            }
+            60% {
+                transform: translateY(-3px);
+            }
+        }
+        
+        .support-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .support-username {
+            font-size: 0.8em;
+            opacity: 0.9;
+            font-weight: normal;
+        }
+
+.footer {
+    position: relative;
+    z-index: 2;
+    padding: 30px 20px;
+    margin-top: 60px;
+    text-align: center;
+    color: #b19cd9;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(118, 75, 162, 0.3);
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-text {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-text p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+.footer-text strong {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(118, 75, 162, 0.5);
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #b19cd9;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid rgba(118, 75, 162, 0.3);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.footer-link:hover {
+    color: #fff;
+    border-color: rgba(118, 75, 162, 0.6);
+    background: rgba(118, 75, 162, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(118, 75, 162, 0.3);
+}
+
+.link-icon {
+    font-size: 1.1rem;
+}
+
+/* انیمیشن برای متن فوتر */
+.footer-text p {
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+/* رسپانسیو */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
+
     </style>
 </head>
 <body>
+
+    </style>
+</head>
+<body>
+
+
+
+
+    
     <!-- Loading Screen -->
     <div class="loader" id="loader">
         <div class="loader-content">
@@ -672,7 +852,7 @@
 
     <div class="container">
         <div class="header">
-            <h1>💥 farhadpubgor</h1>
+            <h1>farhadpubgor</h1>
             <p class="subtitle">شبکه‌های رسمی من</p>
         </div>
 
@@ -713,10 +893,23 @@
             </div>
         </div>
 
+        <!--بخش پشتیبانی   -->
+       
+
+
         <div class="footer">
-            <p>© 2026 | طراحی و توسعه توسط <strong> <b>Unique Taha</b></strong></p>
+    <div class="footer-content">
+        <div class="footer-text">
+            <p>© 2026 <strong>Unique Taha</strong> طراحی و توسعه توسط </p>
+        </div>
+        <div class="footer-links">
+            <a href="https://t.me/Unique_Taha1" target="_blank" class="footer-link">
+                <span class="link-icon">💬</span>
+                پشتیبانی
+            </a>
         </div>
     </div>
+</div>
 
     <!-- Scroll to Top Button -->
     <button class="scroll-top" id="scrollTop" aria-label="بازگشت به بالا">↑</button>
@@ -943,10 +1136,33 @@
                 // Recalculate positions if needed
             }, 250);
         });
+
+function initSupportButton() {
+            const supportBtn = document.querySelector('.support-btn');
+            
+            supportBtn.addEventListener('mouseenter', () => {
+                const cursorGlow = document.getElementById('cursorGlow');
+                cursorGlow.style.background = 'radial-gradient(circle, rgba(0, 136, 204, 0.8) 0%, transparent 70%)';
+                cursorGlow.classList.add('active');
+            });
+            
+            supportBtn.addEventListener('mouseleave', () => {
+                const cursorGlow = document.getElementById('cursorGlow');
+                cursorGlow.style.background = 'radial-gradient(circle, rgba(118, 75, 162, 0.6) 0%, transparent 70%)';
+            });
+        }
+
+        // در تابع window.addEventListener('load') این خط را اضافه کنید:
+        window.addEventListener('load', () => {window.addEventListener('lode')
+           
+            
+            // اضافه کردن این خط:
+            initSupportButton();
+        });
+
+
+        
     </script>
 </body>
 </html>
-
-
-
 
