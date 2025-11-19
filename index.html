@@ -964,7 +964,20 @@
   }
 }
 
-
+body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* فقط غیرفعال کردن اسکرول افقی */
+            overflow-y: auto; /* اجازه اسکرول عمودی */
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* اطمینان از اینکه هیچ المانی باعث اسکرول افقی نشود */
+        .container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
 
     </style>
 </head>
@@ -1325,4 +1338,5 @@ function initSupportButton() {
     </script>
 </body>
 </html>
+
 
